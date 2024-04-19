@@ -1,14 +1,19 @@
 import React from 'react';
 
-const Badge = ({ generateBadge }) => {
-    const handleGenerateBadge = () => {
-        // Mettez ici la logique pour générer le badge, si nécessaire
+const Badge = ({ selectedArtistId }) => {
+    const generateBadge = () => {
+        if (selectedArtistId) {
+            // Implémentez votre logique de génération de badge ici, en utilisant selectedArtistId
+            console.log(`Génération du badge pour l'artiste ${selectedArtistId}`);
+        } else {
+            console.log('Aucun artiste sélectionné');
+        }
     };
 
     return (
         <div className="badge-container">
             <div>
-                <button onClick={handleGenerateBadge}>Générer le badge</button>
+                <button onClick={generateBadge}>Générer le badge</button>
             </div>
         </div>
     );

@@ -21,9 +21,8 @@ const Exercice = () => {
                 </select>
             </div>
             <div>
-                <Badge generateBadge={() => selectedArtistId} />
+                <Badge selectedArtistId={selectedArtistId} />
             </div>
-
         </div>
     );
 };
