@@ -17,11 +17,12 @@ const Badge = ({ selectedArtistId }) => {
         const alt = generateAlt(artiste);
 
         // Générer le code HTML du badge
-        const badgeHtml = `<a href="#" alt="${alt}"><img src="votre-image.jpg" alt="${alt}"></a>`;
+        const badgeHtml = `<!--Badge--><a href="#" alt="${alt}"><img src="votre-image.jpg" alt="${alt}" style="width: 140px; height: 140px;"/></a>`;
 
         // Mettre à jour l'état avec le badge généré
         setGeneratedBadge(badgeHtml);
     };
+
 
     const generateAlt = (artiste) => {
         const randomFirstWord = getRandomFirstWord();
