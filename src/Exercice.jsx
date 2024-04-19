@@ -3,6 +3,7 @@ import artistesData from './variables.json';
 import Badge from './Badge';
 
 const Exercice = () => {
+    //use state pour mettre à jour la valeur de SelectedArtist à passer en props à Badge
     const [selectedArtistId, setSelectedArtistId] = useState('');
 
     const handleArtistChange = (event) => {

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { generateAlt } from './badgeGenerator';
+import React, { useState } from 'react'; // Importez useState depuis React
 import artistesData from './variables.json';
 
 const Badge = ({ selectedArtistId }) => {
@@ -16,25 +17,14 @@ const Badge = ({ selectedArtistId }) => {
         // Générer l'attribut alt
         const alt = generateAlt(artiste);
 
-        // Générer le code HTML du badge
-        const badgeHtml = `<!--Badge--><a href="#" alt="${alt}"><img src="votre-image.jpg" alt="${alt}" style="width: 140px; height: 140px;"/></a>`;
+        // URL de l'image
+        const imageUrl = 'https://images.lesindesradios.fr/fit-in/1100x2000/filters:format(webp)/medias/Vsj0LZpM34/image/Slash_Londres_20221697615214906-format16by9.png';
+
+        // Générer le code HTML du badge avec l'URL de l'image et l'attribut alt
+        const badgeHtml = `<!--Badge--><a href="https://linkaband.com" target'_blank'><img src="${imageUrl}" alt="${alt}" style="width: 140px; height: 140px;"/></a>`;
 
         // Mettre à jour l'état avec le badge généré
         setGeneratedBadge(badgeHtml);
-    };
-
-
-    const generateAlt = (artiste) => {
-        const randomFirstWord = getRandomFirstWord();
-        const secondWord = Object.values(artiste.styles).some(style => style.name === 'STYLE.DJ') ? 'DJ' : (artiste.nbmembres > 2 ? 'groupe de musique' : 'musicien');
-        const thirdWord = Math.random() < 0.5 ? artiste.localisation : Object.values(artiste.styles).map(style => style.name).join(', ');
-
-        return `${randomFirstWord} ${secondWord} ${thirdWord}`;
-    };
-
-    const getRandomFirstWord = () => {
-        const firstWords = ['Recherche', 'Devis', 'Tarifs', 'Prix', 'Reservation', 'Cherche'];
-        return firstWords[Math.floor(Math.random() * firstWords.length)];
     };
 
     return (
@@ -43,7 +33,6 @@ const Badge = ({ selectedArtistId }) => {
                 <button onClick={generateBadge}>Générer le badge</button>
             </div>
             <div>
-                {/* Affichage du badge généré */}
                 {generatedBadge && <pre>{generatedBadge}</pre>}
             </div>
         </div>
@@ -51,3 +40,4 @@ const Badge = ({ selectedArtistId }) => {
 };
 
 export default Badge;
+
