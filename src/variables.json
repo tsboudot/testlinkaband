@@ -1,0 +1,84 @@
+{
+  "artistes": [
+    {
+      "id": 1,
+      "nbmembres": "1",
+      "styles": {
+        "0": {
+          "name": "STYLE.DJ"
+        },
+        "1": {
+          "name": "STYLE.JAZZ"
+        },
+        "2": {
+          "name": "STYLE.ROCK"
+        }
+      },
+      "localisation": "paris"
+    },
+    {
+      "id": 2,
+      "nbmembres": "3",
+      "styles": {
+        "0": {
+          "name": "STYLE.FOLK"
+        }
+      },
+      "localisation": "neuilly"
+    },
+    {
+      "id": 3,
+      "nbmembres": "2",
+      "styles": {
+        "0": {
+          "name": "STYLE.ROCK"
+        },
+        "1": {
+          "name": "STYLE.POP"
+        },
+        "2": {
+          "name": "STYLE.SOUL"
+        },
+        "3": {
+          "name": "STYLE.HOUSE"
+        },
+        "4": {
+          "name": "STYLE.FUNK"
+        }
+      },
+      "localisation": "sannois"
+    },
+    {
+      "id": 4,
+      "nbmembres": "4",
+      "styles": {
+        "0": {
+          "name": "STYLE.ROCK"
+        },
+        "1": {
+          "name": "STYLE.POP"
+        },
+        "2": {
+          "name": "STYLE.SOUL"
+        },
+        "3": {
+          "name": "STYLE.HOUSE"
+        },
+        "4": {
+          "name": "STYLE.FUNK"
+        }
+      },
+      "localisation": "vanves"
+    },
+    {
+      "id": 5,
+      "nbmembres": "5",
+      "styles": {
+        "0": {
+          "name": "STYLE.DJ"
+        }
+      },
+      "localisation": "vanves"
+    }
+  ]
+}
